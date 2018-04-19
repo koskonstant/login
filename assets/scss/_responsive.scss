@@ -1,0 +1,93 @@
+@media (max-width: $breakpoint-tablet) {  
+  body{
+    height:auto;
+    background:linear-gradient(rgba(207, 49, 50, 0.95),rgba(255, 0, 0, 0.45)),
+    url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .hide-desktop{
+    display: block;
+  }
+
+  .main {
+    width: 100%;
+    .inner-main{
+      padding: 2.5rem;
+    }
+  }
+
+  .form-group{
+    .form-input{
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+      border-left: 2px solid $white; 
+      border-bottom:2px solid $white;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      padding: 10px 15px;
+      color:$white;
+      &::placeholder {
+        color: $white;
+      }
+      &:focus {
+        border-color: darken( $white, 15% );
+      }  
+    }
+    .button--login {
+      width:100%;
+      background: $white;
+      color:$primary;
+      &:hover{
+        background:darken( $white, 15% );
+      }
+    }
+  }
+
+  .form-radio{ 
+    text-align: center;
+    label {
+      color: $white;
+    }
+  }
+
+  
+
+  .social-buttons{
+    .button{
+      width: 50px;
+      height: 50px;
+      padding: 0px;
+      font-size: 25px;
+      border-radius: 27px;
+      -moz-border-radius:27px;
+      -webkit-border-radius:27px;
+      display: flex;
+      justify-content: center;
+      i{
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-medium) {
+  html,body{
+    height:auto;
+  }
+
+  .social-buttons .button{
+    padding: .8em;
+    font-size: 13px
+  }
+
+  #pageContainer {    
+    padding: 20px;
+  }
+}

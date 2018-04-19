@@ -1,0 +1,352 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  line-height: 1.75;
+  font-size: 14px;
+  color: #444;
+}
+
+#pageContainer {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0px 20px;
+}
+
+.main {
+  width: 50%;
+}
+
+.inner-main {
+  padding: 2.5rem 4rem;
+}
+
+.social-media h4.heading-line {
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+.social-media h4.heading-line:before, .social-media h4.heading-line:after {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.social-media h4.heading-line:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.social-media h4.heading-line:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.social-media .social-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registration h2 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.registration p {
+  margin: 5px 0px;
+  font-size: 14px;
+}
+
+.registration p a {
+  color: #897d7d;
+  text-decoration: none;
+}
+
+.registration p a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  padding: 40px 0px;
+}
+
+.social-media h3 {
+  font-size: 14px;
+  color: #897d7d;
+  font-weight: 600;
+}
+
+.flex-end {
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+.avatar {
+  text-align: center;
+  margin: 20px 20px 40px 20px;
+}
+
+.avatar img {
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  background: url("../img/bg.jpg");
+  width: 50%;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  min-height: 660px;
+}
+
+.sidebar .sidebar-content {
+  padding: 10px 60px;
+}
+
+.sidebar .sidebar-content h1 {
+  color: #fff;
+  font-size: 100px;
+  line-height: 1em;
+  margin-bottom: 0;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .sidebar-content p.tagline {
+  color: #fff;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  max-width: 340px;
+  font-size: 14px;
+}
+
+.button {
+  width: 90px;
+  border: none;
+  background: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.button.button--fb {
+  background: #3B5999;
+}
+
+.button.button--fb::before {
+  background: #263962;
+}
+
+.button.button--twitter {
+  background: #4099FF;
+}
+
+.button.button--twitter::before {
+  background: #0071f3;
+}
+
+.button.button--google {
+  background: #d34836;
+}
+
+.button.button--google::before {
+  background: #9b3022;
+}
+
+.button.button--login {
+  background: #CA2545;
+  width: 170px;
+  text-transform: uppercase;
+  padding: 0.8em 2.8em;
+  font-size: 16px;
+}
+
+.button.button--login:hover {
+  background: #89192f;
+  transition: .5s ease;
+}
+
+.button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin: -15px 0 0 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: scale3d(1, 2, 1);
+  transform: scale3d(1, 2, 1);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover::before {
+  -webkit-transform: scale3d(9, 9, 1);
+  transform: scale3d(9, 9, 1);
+}
+
+.button span {
+  vertical-align: middle;
+  padding-left: 0.75em;
+}
+
+.form-input {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  width: 100%;
+  margin: 15px 0px;
+  line-height: 2;
+  font-weight: bold;
+  border-color: #897d7d;
+  color: #444;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: black;
+}
+
+.form-input:focus {
+  border-color: #111;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-radio label {
+  color: #897d7d;
+}
+
+@media (max-width: 991px) {
+  body {
+    height: auto;
+    background: linear-gradient(rgba(207, 49, 50, 0.95), rgba(255, 0, 0, 0.45)), url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .hide-desktop {
+    display: block;
+  }
+  .main {
+    width: 100%;
+  }
+  .main .inner-main {
+    padding: 2.5rem;
+  }
+  .form-group .form-input {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    color: #fff;
+  }
+  .form-group .form-input::placeholder {
+    color: #fff;
+  }
+  .form-group .form-input:focus {
+    border-color: #d9d9d9;
+  }
+  .form-group .button--login {
+    width: 100%;
+    background: #fff;
+    color: #444;
+  }
+  .form-group .button--login:hover {
+    background: #d9d9d9;
+  }
+  .form-radio {
+    text-align: center;
+  }
+  .form-radio label {
+    color: #fff;
+  }
+  .social-buttons .button {
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    font-size: 25px;
+    border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+    display: flex;
+    justify-content: center;
+  }
+  .social-buttons .button i {
+    line-height: 50px;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1100px) {
+  html, body {
+    height: auto;
+  }
+  .social-buttons .button {
+    padding: .8em;
+    font-size: 13px;
+  }
+  #pageContainer {
+    padding: 20px;
+  }
+}

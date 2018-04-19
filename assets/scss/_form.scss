@@ -1,0 +1,32 @@
+.form-input {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  width: 100%;
+  margin: 15px 0px;
+  line-height: 2;
+  font-weight: bold;
+  border-color:$grey;
+  color:$primary;
+  outline: none;
+  &::placeholder {
+    color: black;
+  }
+  &:focus {
+    border-color: $dark-grey;
+  }  
+}
+
+.form-group{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;  
+}
+
+.form-radio{  
+  label{
+    color:$grey;
+  }
+}
