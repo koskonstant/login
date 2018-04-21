@@ -6,60 +6,66 @@
     <meta name="description" content="project Phase 1">
     <meta name="author" content="Kostas Konstantoulakis">
     <title>Login</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
-    <link href="assets/css/login.min.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="assets/favicons/favicon.png" type="image/x-icon">
     <link rel="icon" href="assets/favicons/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800|Roboto+Slab:300,400,700" rel="stylesheet"> 
+    <link href="assets/css/login.css" rel="stylesheet">    
   </head>
 
   <body>
     <div id="pageContainer">    
       <aside class="sidebar hide-mobile">
-        <header class="sidebar-content">
-          <h1>Hello<br>World.</h1>
-          <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut ullamcorper ipsum.</p>
-        </header>
+        <h2>Hello<span>World.</span></h2>
+        <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut ullamcorper ipsum.</p>
       </aside>
       <main class="main">
         <div class="inner-main">
           <section class="registration">
             <header class="hide-mobile">              
-              <h2>Register</h2>
+              <h1>Register</h1>
               <p>Don't have an account? <a href="#">Create your account</a>, it takes lesss than a minute</p>
             </header>
-            <section class="avatar hide-desktop">
+            <figure class="avatar hide-desktop">
               <img title="Avatar" alt="Avatar" src="assets/img/avatar.png" />
-            </section>
+            </figure>
             <form action="#">
               <div class="form-group hide-mobile">
-                <input class="form-input" type="text" name="name" id="name" placeholder="NAME" />
+                <input class="form-input" type="text" name="name" id="name" required/>
+                <label for="name">NAME</label>
+                <span class="hide-desktop"></span>
               </div>
               <div class="form-group">
-                <input class="form-input" type="text" name="email" id="email" placeholder="EMAIL ID" />
+                <input class="form-input" type="text" name="email" id="email" placeholder="Email Id" required />
+                <label for="email">EMAIL ID</label>
+                <span></span>
               </div>
               <div class="form-group">
-                <input class="form-input" type="number" name="phone" id="phone" placeholder="PHONE NO" />
-              </div>               
+                <input class="form-input" type="number" name="phone" id="phone" placeholder="Phone Id" required/>
+                <label for="phone">PHONE NO</label>
+                <span></span>
+              </div>
               <div class="form-group">
-                <input class="form-input" type="password" name="password" id="password" placeholder="PASSWORD" required />
-              </div> 
+                <input class="form-input" type="password" name="password" id="password" placeholder="Password" required />
+                <label for="password">PASSWORD</label>
+                <span></span>
+                <i class="icon icon-info hide-mobile"></i>
+              </div>
               <div class="form-radio">
-                <label><input type="radio" name="optradio">I accept terms and conditions and privacy policy</label>
+                <input type="checkbox" id="terms" name="terms" value="terms">
+                <label for="terms">I accept terms and conditions and privacy policy</label>
               </div>
-              <div class="form-group flex-end">         
-                <input class="button button--login" type="submit" value="Login" />
-              </div>
+              <div class="form-group flex-end">
+                <button class="button button--login" type="submit">Login</button>      
+              </div>              
             </form>  
           </section>
           <section class="social-media">
-            <h3 class="hide-mobile">Login with social media</h3>
-            <h4 class="heading-line hide-desktop">Or</h4>
+            <h3>Login with social media</h3>
             <div class="social-buttons">
-              <a href="#" class="button button--fb"><i class="fab fa-facebook-f"></i><span class="hide-mobile">Facebook</span></a>
-              <a href="#" class="button button--twitter"><i class="fab fa-twitter"></i><span class="hide-mobile">Twitter</span></a>
-              <a href="#" class="button button--google"><i class="fab fa-google-plus-g"></i><span class="hide-mobile">Google +</span></a>
+              <a href="#" class="button button--fb"><i class="icon icon-facebook"></i><span class="hide-mobile">Facebook</span></a>
+              <a href="#" class="button button--twitter"><i class="icon icon-twitter"></i><span class="hide-mobile">Twitter</span></a>
+              <a href="#" class="button button--google"><i class="icon icon-google-plus"></i><span class="hide-mobile">Google +</span></a>
             </div>
           </section>
         </div>
