@@ -403,6 +403,10 @@ form .form-radio input[type=checkbox]:checked + *:before {
   form .form-radio label {
     color: #fff;
   }
+  form .form-radio input[type="checkbox"] + ::before {
+    background: transparent;
+    border-color: #fff;
+  }
   .social-media h3 {
     color: #fff;
     text-align: center;

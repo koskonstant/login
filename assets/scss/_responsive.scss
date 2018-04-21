@@ -78,6 +78,10 @@
       label {
         color: $white;
       }
+      & input[type="checkbox"] + ::before{
+        background:transparent;
+        border-color: $white;
+      }
     }
   }  
 
