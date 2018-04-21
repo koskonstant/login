@@ -1,12 +1,19 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   margin: 0;
-  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   position: relative;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,60 +27,29 @@ p {
 }
 
 #pageContainer {
-  max-width: 1200px;
-  margin: 0px auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  margin: 0px auto;
   border-radius: 20px;
+  padding: 20px;
   align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-  padding: 0px 20px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .main {
-  width: 50%;
+  flex: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
 }
 
 .inner-main {
   padding: 2.5rem 4rem;
 }
 
-.social-media h4.heading-line {
-  overflow: hidden;
-  text-align: center;
-  color: #fff;
-}
-
-.social-media h4.heading-line:before, .social-media h4.heading-line:after {
-  background-color: #fff;
-  content: "";
-  display: inline-block;
-  height: 2px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
-}
-
-.social-media h4.heading-line:before {
-  right: 0.5em;
-  margin-left: -50%;
-}
-
-.social-media h4.heading-line:after {
-  left: 0.5em;
-  margin-right: -50%;
-}
-
-.social-media .social-buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.registration h2 {
+.registration h1 {
   font-size: 42px;
   margin: 0;
 }
@@ -84,7 +60,7 @@ p {
 }
 
 .registration p a {
-  color: #897d7d;
+  color: #00b6ff;
   text-decoration: none;
 }
 
@@ -93,13 +69,22 @@ p {
 }
 
 .social-media {
-  padding: 40px 0px;
+  padding: 10px 0px;
 }
 
 .social-media h3 {
   font-size: 14px;
   color: #897d7d;
   font-weight: 600;
+}
+
+.social-media .social-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media .social-buttons i {
+  font-size: 18px;
 }
 
 .flex-end {
@@ -123,30 +108,36 @@ p {
 
 .sidebar {
   background: url("../img/bg.jpg");
-  width: 50%;
   background-size: cover;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  min-height: 660px;
+  flex: 1;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 0;
+  max-height: 760px;
+  height: 100%;
 }
 
-.sidebar .sidebar-content {
-  padding: 10px 60px;
-}
-
-.sidebar .sidebar-content h1 {
+.sidebar h2 {
   color: #fff;
   font-size: 100px;
   line-height: 1em;
   margin-bottom: 0;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  padding: 10px 60px;
 }
 
-.sidebar .sidebar-content p.tagline {
+.sidebar h2 span {
+  display: block;
+}
+
+.sidebar p.tagline {
   color: #fff;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   max-width: 340px;
   font-size: 14px;
+  padding: 0px 60px;
 }
 
 .button {
@@ -160,12 +151,15 @@ p {
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.8em 1.5em;
+  padding: 0.8em 1.25em;
   color: #fff;
   overflow: hidden;
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   border-radius: 40px;
   font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .button.button--fb {
@@ -198,6 +192,7 @@ p {
   text-transform: uppercase;
   padding: 0.8em 2.8em;
   font-size: 16px;
+  margin-top: 30px;
 }
 
 .button.button--login:hover {
@@ -239,40 +234,103 @@ p {
   padding-left: 0.75em;
 }
 
-.form-input {
-  background-color: transparent;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
-  width: 100%;
-  margin: 15px 0px;
-  line-height: 2;
-  font-weight: bold;
-  border-color: #897d7d;
-  color: #444;
-  outline: none;
+form .form-group .form-input:focus ~ label, form .form-group .form-input:valid ~ label {
+  top: -2.25rem;
+  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
 }
 
-.form-input::placeholder {
-  color: black;
+form {
+  margin-top: 30px;
 }
 
-.form-input:focus {
-  border-color: #111;
-}
-
-.form-group {
+form .form-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 1em 0rem 1.5em 0rem;
+  position: relative;
 }
 
-.form-radio label {
+form .form-group .form-input {
+  padding: 0.75rem 0rem 0.5rem 0rem;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  border-bottom: 1px solid #111;
+  color: #111;
+}
+
+form .form-group .form-input ~ span {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #00b6ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+}
+
+form .form-group .form-input:focus {
+  outline: 0;
+}
+
+form .form-group .form-input:focus ~ span {
+  width: 100%;
+  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+}
+
+form .form-group .form-input::placeholder {
+  opacity: 0;
+}
+
+form .form-group label {
+  color: #444;
+  padding: 0.75rem 1rem 1rem 0rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+  pointer-events: none;
+  font-weight: 600;
+}
+
+form .form-group .icon {
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
   color: #897d7d;
+  font-size: 20px;
+}
+
+form .form-radio label {
+  color: #000;
+}
+
+form .form-radio input[type=checkbox] {
+  display: none;
+}
+
+form .form-radio input[type=checkbox] + *:before {
+  content: "";
+  display: inline-flex;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: 1px solid #897d7d;
+  background: #fff;
+}
+
+form .form-radio input[type=checkbox]:checked + *:before {
+  box-shadow: 0px 0px 0px .5px grey , inset 0px 0px 0px .14em #ddd;
+  background-color: #444;
 }
 
 @media (max-width: 991px) {
+  html {
+    height: auto;
+  }
   body {
     height: auto;
     background: linear-gradient(rgba(207, 49, 50, 0.95), rgba(255, 0, 0, 0.45)), url("../img/bg.jpg");
@@ -280,7 +338,7 @@ p {
     background-size: cover;
   }
   .hide-mobile {
-    display: none;
+    display: none !important;
   }
   .hide-desktop {
     display: block;
@@ -291,7 +349,7 @@ p {
   .main .inner-main {
     padding: 2.5rem;
   }
-  .form-group .form-input {
+  form .form-group .form-input {
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
     border-left: 2px solid #fff;
@@ -301,28 +359,55 @@ p {
     border-radius: 30px;
     padding: 10px 15px;
     color: #fff;
+    background: transparent;
   }
-  .form-group .form-input::placeholder {
+  form .form-group .form-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: #fff;
   }
-  .form-group .form-input:focus {
+  form .form-group .form-input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+  }
+  form .form-group .form-input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+  }
+  form .form-group .form-input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+  }
+  form .form-group .form-input::placeholder {
+    opacity: 1;
+  }
+  form .form-group .form-input:focus {
     border-color: #d9d9d9;
   }
-  .form-group .button--login {
+  form .form-group .form-input ~ span {
+    display: none;
+  }
+  form .form-group label {
+    display: none;
+  }
+  form .form-group .button--login {
     width: 100%;
     background: #fff;
     color: #444;
   }
-  .form-group .button--login:hover {
+  form .form-group .button--login:hover {
     background: #d9d9d9;
   }
-  .form-radio {
+  form .form-radio {
     text-align: center;
   }
-  .form-radio label {
+  form .form-radio label {
     color: #fff;
   }
-  .social-buttons .button {
+  .social-media h3 {
+    color: #fff;
+    text-align: center;
+  }
+  .social-media .social-buttons .button {
     width: 50px;
     height: 50px;
     padding: 0px;
@@ -333,7 +418,7 @@ p {
     display: flex;
     justify-content: center;
   }
-  .social-buttons .button i {
+  .social-media .social-buttons .button i {
     line-height: 50px;
   }
 }
@@ -350,3 +435,43 @@ p {
     padding: 20px;
   }
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?xxoq17");
+  src: url("../fonts/icomoon.eot?xxoq17#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xxoq17") format("truetype"), url("../fonts/icomoon.woff?xxoq17") format("woff"), url("../fonts/icomoon.svg?xxoq17#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+  content: "\ea0c";
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+/*# sourceMappingURL=login.css.map */
