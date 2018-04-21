@@ -5,13 +5,16 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
+var sourcemaps = require('gulp-sourcemaps');
 
 // Compile SCSS
 gulp.task('css:compile', function() {
   return gulp.src('./assets/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./assets/css'))
 });
 
@@ -48,4 +51,4 @@ gulp.task('browserSync', function() {
 gulp.task('dev', ['css', 'browserSync'], function() {
   gulp.watch('./assets/scss/*.scss', ['css']);
   gulp.watch('./*.html', browserSync.reload);
-});;
+});
