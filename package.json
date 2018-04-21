@@ -1,15 +1,17 @@
 {
-    "title": "Login",
-    "name": "login-page",
-    "description": "project Phase 1",
-    "license": "MIT",
-    "devDependencies": {
-        "browser-sync": "2.23.6",
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "3.9.2",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.2.1",
-        "gulp-uglify": "3.0.0"
-      }
-    }
-    
+  "title": "Login page exersice",
+  "version": "1.0.0",
+  "name": "login-page",
+  "description": "Web dev project Phase 1",
+  "repository": "https://github.com/marinakmp/login.git",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "3.0.0"
+  }
+}
