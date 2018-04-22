@@ -1,14 +1,9 @@
-@media (min-width: $breakpoint-medium) { 
-  body{
-    height: 100vh;
-  }
-}
-
 @media (max-width: $breakpoint-medium) {  
   body{
-    background:linear-gradient(rgba(207, 49, 50, 0.95),rgba(255, 0, 0, 0.45)),
-    url('../img/bg.jpg');
+    background: linear-gradient(rgba(207, 49, 50, 0.95),rgba(255, 0, 0, 0.45)), url('../img/bg.jpg');  
+    background-position: center center;  
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
 
@@ -114,14 +109,8 @@
   }
 }
 
-@media (max-width: $breakpoint-small) {  
-  html{
-    height: auto;
-  }
-}
-
-@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-tablet) {
-  html{
-    height: 100%;
+@media (min-width: $breakpoint-medium) {
+  html, body{
+    height:100%;
   }
 }
