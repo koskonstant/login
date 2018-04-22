@@ -5,3 +5,9 @@
 @mixin heading-font {
   font-family: 'Roboto', sans-serif;
 }
+
+@mixin display-flex{
+  display: -webkit-flex;		
+  display: -ms-flexbox;		
+  display: flex;
+}

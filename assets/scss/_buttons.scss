@@ -1,12 +1,8 @@
 .button {
 	width: 90px;
-	border: none;
-	background: none;
-	color: inherit;
-	position: relative;
+  position: relative;
+  border: none;
 	z-index: 1;
-	-webkit-backface-visibility: hidden;
-	-moz-osx-font-smoothing: grayscale;
   text-decoration: none;
   font-weight: bold;
   padding: 0.8em 1.25em;
@@ -14,10 +10,9 @@
   overflow: hidden;
   box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
   border-radius: 40px;
-  font-size:14px;
+  justify-content: center;  
   align-items: center;
-  justify-content: center;
-  display: flex;
+  @include display-flex;
   &.button--fb {
     background: $fb;
     &::before {

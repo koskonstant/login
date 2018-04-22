@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "name": "login-page",
   "description": "Web dev project Phase 1",
-  "repository": "https://github.com/marinakmp/login.git",
+  "repository": "https://github.com/koskonstant/login.git",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "2.23.6",

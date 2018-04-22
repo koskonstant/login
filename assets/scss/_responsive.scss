@@ -1,10 +1,11 @@
-@media (max-width: $breakpoint-tablet) {  
-  html{
-    height: auto;
-  }
-
+@media (min-width: $breakpoint-medium) { 
   body{
-    height:auto;
+    height: 100vh;
+  }
+}
+
+@media (max-width: $breakpoint-medium) {  
+  body{
     background:linear-gradient(rgba(207, 49, 50, 0.95),rgba(255, 0, 0, 0.45)),
     url('../img/bg.jpg');
     background-repeat: no-repeat;
@@ -19,11 +20,8 @@
     display: block;
   }
 
-  .main {
-    width: 100%;
-    .inner-main{
-      padding: 2.5rem;
-    }
+  .inner-main {
+    padding: 2.5rem 1.5rem;
   }
 
   form{
@@ -38,6 +36,7 @@
         border-radius: 30px;
         padding: 10px 15px;
         color:$white;
+        line-height: 2;
         background: transparent;
         &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
           color: $white;
@@ -58,7 +57,7 @@
           border-color: darken( $white, 15% );
         } 
         ~ span {
-          display: none;;
+          display: none;
         } 
       }
       label{
@@ -99,27 +98,30 @@
         border-radius: 27px;
         -moz-border-radius:27px;
         -webkit-border-radius:27px;
-        display: flex;
-        justify-content: center;
         i{
           line-height: 50px;
+          font-size:25px;
         }
       }
     }
   }
 }
 
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-medium) {
-  html,body{
-    height:auto;
-  }
-
+@media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
   .social-buttons .button{
     padding: .8em;
-    font-size: 13px
+    font-size: 13px;
   }
+}
 
-  #pageContainer {    
-    padding: 20px;
+@media (max-width: $breakpoint-small) {  
+  html{
+    height: auto;
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-tablet) {
+  html{
+    height: 100%;
   }
 }

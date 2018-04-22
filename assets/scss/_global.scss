@@ -1,35 +1,15 @@
-html {
-  height: 100%;
-}
-
 body {
-  @include body-font;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  margin: 0;
-  display: -webkit-flex;		
-  display: -ms-flexbox;		
-  display: flex;
-  margin: 0;
-  position: relative;
-  height: 100%;
+  @include body-font;  
+  @include display-flex;
+  font-size: 14px;
 }
 
 h1,h2,h3,h4,h5,h6 {
   @include heading-font;
 }
 
-p {
-  line-height: 1.75;
-  font-size:14px;
-  color:$primary;
-}
-
 #pageContainer {
-  display: -webkit-flex;		
-  display: -ms-flexbox;		
-  display: flex;
+  @include display-flex;
   margin:0px auto;
   border-radius: 20px;
   padding: 20px;
@@ -56,7 +36,6 @@ p {
   }
   p{
     margin: 5px 0px;
-    font-size: 14px;
     a{
       color: $light-blue;
       text-decoration: none;
@@ -75,10 +54,10 @@ p {
     font-weight:600;
   }
   .social-buttons {
-    display: flex;
+    @include display-flex;
     justify-content: space-between;
     i{
-      font-size:18px;
+      font-size:15px;
     }
   }
 }

@@ -1,11 +1,18 @@
 %label-movement {
-  top: -2.25rem;
+  top: -2rem;
   transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
 }
+
+%abs-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 form{
   margin-top:30px;
   .form-group {
-    display: flex;
+    @include display-flex;
     flex-wrap: wrap;
     align-items: center; 
     margin: 1em 0rem 1.5em 0rem;
@@ -21,11 +28,9 @@ form{
         display: block;
         width: 0;
         height: 3px;
-        background: $light-blue;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        background: $light-blue;        
         transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+        @extend %abs-position;
       }
       &:focus {
         outline: 0;
@@ -46,13 +51,11 @@ form{
     }
     label {
       color: $primary;
-      padding: 0.75rem 1rem 1rem 0rem;
-      position: absolute;
-      top: 0;    
-      left: 0;
+      padding: 0.75rem 1rem 0.3rem 0rem;      
       transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
       pointer-events: none;
       font-weight:600;
+      @extend %abs-position;
     }
     .icon {
       position: absolute;
